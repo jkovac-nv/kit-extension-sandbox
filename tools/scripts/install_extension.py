@@ -2,33 +2,9 @@ import os
 import shutil
 import sys
 
-
-""" May need to switch to copying per-App """
-# import sys
-# import json
-# import urllib.request
-# def find_omniverse_apps():
-#     supported_apps = ["create", "code", "view"]
-#     try:
-#         with urllib.request.urlopen("http://127.0.0.1:33480/components") as response:
-#             r = response.read()
-#     except Exception as e:
-#         print(f"Failed retrieving apps from an Omniverse Launcher, maybe it is not installed?\nError: {e}")
-#         sys.exit(1)
-#     app_paths = []
-#     # @TODO clean this up some
-#     for x in json.loads(r.decode("utf-8")):
-#         latest = x.get("installedVersions", {}).get("latest", "")
-#         if latest:
-#             for s in x.get("settings", []):
-#                 if s.get("version", "") == latest:
-#                     if x["slug"] in supported_apps:
-#                         app_paths.append(s["base"])
-#     return app_paths
-
 def install_extension():
-    # os.chdir("../../")
-    src_exts_path = os.path.join(os.getcwd(), 'exts')
+    src_path = Path(__file__).resolve().parent.parent.parent
+    src_exts_path = os.path.join(src_path, 'exts')
     dst_exts_path = get_default_exts_path()
     subdirs = os.listdir(src_exts_path)
     if not len(subdirs):
