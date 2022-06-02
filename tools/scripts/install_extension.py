@@ -1,6 +1,8 @@
 import os
 import shutil
 import sys
+from pathlib import Path
+
 
 def install_extension():
     src_path = Path(__file__).resolve().parent.parent.parent
@@ -37,6 +39,7 @@ def get_default_exts_path():
     except:  # pylint: disable=bare-except
         pass
     return os.path.join(docs_dir, "kit\\shared\\exts")
+
 
 if __name__ == "__main__":
     install_extension()
