@@ -1,8 +1,4 @@
-# show this in the library, default is true
-showInLibrary = true
-
 ## install and launch instructions by environment
-
 [defaults.windows-x86_64]
 entrypoint = ""
 args = []
