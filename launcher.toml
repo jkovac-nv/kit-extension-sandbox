@@ -1,0 +1,34 @@
+# show this in the library, default is true
+showInLibrary = true
+
+## install and launch instructions by environment
+
+[defaults.windows-x86_64]
+entrypoint = ""
+args = []
+
+[defaults.windows-x86_64.environment]
+
+[defaults.windows-x86_64.install]
+pre-install = ""
+pre-install-args = []
+install = ""
+install-args = []
+post-install = ""
+post-install-args = []
+
+[defaults.windows-x86_64.uninstall]
+pre-uninstall = ""
+pre-uninstall-args = []
+uninstall = ""
+uninstall-args = []
+post-uninstall = ""
+post-uninstall-args = []
+
+[defaults.windows-x86_64.register]
+command = '${productRoot}/install_extension.bat'
+args = [""]
+
+[defaults.windows-x86_64.unregister]
+command = '${productRoot}/uninstall_extension.bat'
+args = [""]
